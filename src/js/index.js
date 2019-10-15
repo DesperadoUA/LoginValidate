@@ -21,6 +21,7 @@ jQuery(document).ready(function() {
       if(passwordUppercaseCharacters(passwordValue)) arrError.push("passwordUppercaseCharacters");
       if(passwordLowercaseCharacters(passwordValue)) arrError.push("passwordLowercaseCharacters");
       if(passwordNumberCharacters(passwordValue)) arrError.push("passwordNumberCharacters");
+      if(passwordSpecialCharacters(passwordValue)) arrError.push("passwordSpecialCharacters");
       if(emptyFieldLogin(loginValue)) arrError.push("emptyFieldLogin");
       if(emptyFieldPassword(passwordValue)) arrError.push("emptyFieldPassword");
       
@@ -89,6 +90,12 @@ jQuery(document).ready(function() {
       } else {
         return false;
       }
+    }
+    function passwordSpecialCharacters( passwordValue ){
+      for( let i=0; i<passwordValue.length; i++ ) {
+        if(arrSpecialCharacters.has(passwordValue[i])) return false;
+      }
+      return true;
     }
 
   });
