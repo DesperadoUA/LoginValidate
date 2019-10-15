@@ -3,230 +3,85 @@
       margin: 0px;
       padding: 0px;
     }
-    body
-    {
-      min-height: 100vh;
-      background:  #E6F5F4;
-    }
     .container
     {
-      width:1200px;
-      margin: 0 auto;
-    }
-    h1
-    {
-      margin-top: 72px;
-      font-family: PT Serif;
-      font-weight: bold;
-      font-size: 40px;
-      line-height: 56px;
-      text-align: center;
-      color: #009688;
-      margin-bottom: 20px;
-    }
-    
-    .slider
-    {
-        padding-left: 15px;
-        padding-right: 15px;
-        .slider_item
-        {
-            width: 352px!important;
-            height:352px;
-            margin-left: 15px;
-            margin-right: 15px;
-            display: flex;
-            .slider_card
-            {
-                position: relative;
-                height:352px;
-                display: flex;
-                align-items: flex-end;
-                border-radius: 8px;
-                cursor: pointer;
-                .slider_item_desc
-                {
-                    position: relative;
-                    padding: 81px 32px 31px;
-                    transition: 0.7s;
-                    p
-                    {
-                        font-family: Open Sans;
-                        font-style: normal;
-                        font-weight: bold;
-                        font-size: 20px;
-                        line-height: 32px;
-                        color: #fff;
-                    }
-                }
-               .slider_item_mask
-                {
-                   position: absolute;
-                   height: 176px;
-                   left: 0px;
-                   right: 0px;
-                   bottom: 0px;
-                   background: linear-gradient(360deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0) 100%);
-                  border-radius: 0px 0px 8px 8px;
-                }
-            }
-            &:hover  .slider_item_desc
-            {
-                padding-bottom: 62px;
-            }
-        }
-        .bg_1
-        {
-            background: url("/template/img/pattern.png") #5ECABF;
-        }
-        .bg_2
-        {
-            background: url("/template/img/pattern_2.png") #009688;
-        }
-        .bg_3
-        {
-            background: url("/template/img/pattern_3.png") #EE7E4A;
-        }
-        .slick-list
-        {
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
-    }
-    .slick-slide:nth-child(1) .slider_card
-    {
-        background: url("/template/img/pattern.png") #5ECABF;
-    }
-    .slick-next, .slick-prev, .slick-dots
-        {
-        display: none!important;
-        }
-    .arrow_container
-    {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        height: 100vh;
+        background: url("/template/img/dark-triangles.png") 100% 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        ul
-        {
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        li
-        {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #009688;
-            opacity: 0.25;
-            cursor: pointer;
-            transition: 0.7s;
-            margin-left: 2px;
-            margin-right: 2px;
-            &:hover
-            {
-                transform: scale(1.5);
-                opacity: 1;
-            }
-        }
     }
-    .slider_next_mm, .slider_prev_mm
+    .wrapper_form
     {
+        width:320px;
+        padding: 15px;
+        background: #f5f5f52d;
+    }
+    .container_form
+    {
+        background: #b3b3b3;
+        text-align: center;
+        padding: 50px 30px 15px;
+    }
+    h1{
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        color: #000;
+    }
+    .wrapper_input
+    {
+        border:1px solid #575757;
+        margin-bottom:15px;
+        background: #fff;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #009688;
-        font-weight: 800;
-        font-size: 25px;
-        width: 48px;
-        height: 48px;
-        border: 2px solid #009688;
-        box-sizing: border-box;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: 0.7s;
-        opacity: 0.25;
-        &:hover
-        {
-            opacity: 1;
-        }
     }
-    .arrow_wrapper
+    input
     {
-        display: flex;
-        align-items: center;
+        height: 50px;
+        border:none;
+        width: 240px;
     }
-    .slick-slide
+    input:active, input:focus
     {
-        display: flex!important;
-        justify-content: center;
+        outline:none;
+        border:none;
     }
-    @media screen and (min-width: 768px) and (max-width: 1200px) 
+    .login_button, .password_button
     {
-        .container
-        {
-            width: 100%;
-        }
-        h1
-        {
-            margin-top: 56px;
-            font-size: 32px;
-            line-height: 48px;
-        }
-        .slider
-        {
-            .slider_item
-            {
-            width: 328px!important;
-            height: 328px;
-            .slider_card
-            {
-                height: 328px;
-            }
-            }
-        }
+        height:50px;
+        width:50px;
     }
-    @media screen and (min-width: 319px) and (max-width: 767px)
+    .login_button
     {
-        .container
-        {
-            width: 100%;
-        }
-
-        h1
-        {
-            margin-top: 56px;
-            font-size: 32px;
-            line-height: 48px;
-        }
-        .slider
-        {
-            .slider_item
-            {
-            width: 244px!important;
-            height: 244px;
-            .slider_card
-            {
-                height: 244px;
-            }
-            .slider_item_desc
-            {
-                p
-                {
-                    font-size: 18px;
-                }
-            }
-            }
-        }
-        .arrow_wrapper
-        {
-            width: 90%;
-        }
-        .slider_buller_ul
-        {
-            text-align: center;
-            max-width: 160px;
-        }
-    } 
+        background: url("/template/img/account.png");
+    }
+    .password_button
+    {
+        background: url("/template/img/key.png");
+    }
+    button
+    {
+        background: #ff000f;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 10px 50px;
+        border:none;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    .forgot
+    {
+        text-decoration:underline;
+    }
+    .empty_input
+    {
+        border-bottom: 2px solid red;
+    }
+    .error p
+    {
+        text-align: left;
+    }
+    .error p:first-child
+    {
+        margin-top: 15px;
+    }

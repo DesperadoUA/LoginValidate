@@ -3,8 +3,8 @@ const sass=require('gulp-sass');
 const concat=require('gulp-concat');
 const autoprefixer=require('gulp-autoprefixer');
 const sassFiles=['./src/css/main_page.scss'];
-const cssFiles=['./template/slick/slick.css', './src/css/style_sass.css'];
-const jsFiles=['./src/js/jQuery.js', './template/slick/slick.min.js', './src/js/index.js'];
+const cssFiles=['./src/css/style_sass.css'];
+const jsFiles=['./src/js/jQuery.js', './src/js/index.js'];
 function sass_style(){
    
          return gulp.src(sassFiles)
