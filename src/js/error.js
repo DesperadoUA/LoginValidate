@@ -1,7 +1,7 @@
 const obj_error = {
     loginFewCharacters: "Логин не должен быть меньше 3 символов",
     loginMoreCharacters: "Максимальная длина логина 20 символов",
-    loginSpecialCharacters: "Логин не должен содержать спецсимволы",
+    loginSpecialCharacters: "Логин не должен содержать спец символы",
     passwordFewCharacters: "Пароль не должен быть меньше 5 символов",
     passwordMoreCharacters: "Максимальная длина пароля 20 символов",
     passwordUppercaseCharacters: "Пароль должен содержать 1 большую букву",
