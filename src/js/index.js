@@ -1,8 +1,7 @@
 import obj_eror from "../../src/js/error.js";
-import {arrLowercase, arrUppercase, arrNumber, arrSpecialCharacters} from "../../src/js/specialCharacters.js";
 import Validate from "../../src/js/stringValidate.js";
 jQuery(document).ready(function() {
-    const stringValidate = new Validate(arrLowercase, arrUppercase, arrNumber, arrSpecialCharacters);
+    const stringValidate = new Validate();
     jQuery("#submite").click(function(){
       const loginValue = jQuery("#login").val();
       const passwordValue = jQuery("#password").val(); 

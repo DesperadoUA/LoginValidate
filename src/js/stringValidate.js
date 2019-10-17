@@ -1,9 +1,11 @@
+import {arrLowercase, arrUppercase, arrNumber, arrSpecialCharacters} from "../../src/js/specialCharacters.js";
+
 class stringValidate {
-    constructor(arrLowercase, arrUppercase, arrNumber, arrSpecialCharacters) {
-      this.arrLowercase = arrLowercase;
-      this.arrUppercase = arrUppercase;
-      this.arrNumber = arrNumber;
-      this.arrSpecialCharacters =  arrSpecialCharacters;
+    constructor(Lowercase, Uppercase, Numbers, SpecialCharacters) {
+      this.arrLowercase = Lowercase || arrLowercase;
+      this.arrUppercase = Uppercase || arrUppercase;
+      this.arrNumber = Numbers || arrNumber;
+      this.arrSpecialCharacters =  SpecialCharacters || arrSpecialCharacters;
     }
     fewCharacters(str, minValue){
         return str.length >= minValue ? false : true; 
@@ -35,9 +37,7 @@ class stringValidate {
             }
             return false;
       }
-      hasEmpty(str){
-         return str === '' ? true: false;
-      }
+      hasEmpty(str){ return str === '' ? true: false; }
   }
 
 export default stringValidate;
