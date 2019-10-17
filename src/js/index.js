@@ -1,5 +1,6 @@
 import obj_eror from "../../src/js/error.js";
 import Validate from "../../src/js/stringValidate.js";
+
 jQuery(document).ready(function() {
     const stringValidate = new Validate();
     jQuery("#submite").click(function(){

@@ -1,9 +1,13 @@
 import {arrLowercase, arrUppercase, arrNumber, arrSpecialCharacters} from "../../src/js/specialCharacters.js";
 
 class stringValidate {
-    constructor(Lowercase, Uppercase, Numbers, SpecialCharacters) {
-      this.arrLowercase = Lowercase || arrLowercase;
+    constructor(Uppercase, Numbers, SpecialCharacters) {
       this.arrUppercase = Uppercase || arrUppercase;
+      if(Uppercase != undefined) {
+        this.arrLowercase = new Set(Array.from(Uppercase).map(item => item.toLowerCase()));
+      } else {
+        this.arrLowercase = arrLowercase;
+      }
       this.arrNumber = Numbers || arrNumber;
       this.arrSpecialCharacters =  SpecialCharacters || arrSpecialCharacters;
     }
