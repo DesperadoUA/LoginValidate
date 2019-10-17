@@ -1,15 +1,15 @@
-import {arrLowercase, arrUppercase, arrNumber, arrSpecialCharacters} from "../../src/js/specialCharacters.js";
+import {setLowercase, setUppercase, setNumber, setSpecialCharacters} from "../../src/js/specialCharacters.js";
 
 class stringValidate {
     constructor(Uppercase, Numbers, SpecialCharacters) {
-      this.arrUppercase = Uppercase || arrUppercase;
+      this.setUppercase = Uppercase || setUppercase;
       if(Uppercase != undefined) {
-        this.arrLowercase = new Set(Array.from(Uppercase).map(item => item.toLowerCase()));
+        this.setLowercase = new Set(Array.from(Uppercase).map(item => item.toLowerCase()));
       } else {
-        this.arrLowercase = arrLowercase;
+        this.setLowercase = setLowercase;
       }
-      this.arrNumber = Numbers || arrNumber;
-      this.arrSpecialCharacters =  SpecialCharacters || arrSpecialCharacters;
+      this.setNumber = Numbers || setNumber;
+      this.setSpecialCharacters =  SpecialCharacters || setSpecialCharacters;
     }
     fewCharacters(str, minValue){
         return str.length >= minValue ? false : true; 
@@ -19,25 +19,25 @@ class stringValidate {
       }
       hasSpecialCharacters(str){
           for( let i=0; i<str.length; i++ ) {
-              if(this.arrSpecialCharacters.has(str[i])) return true;
+              if(this.setSpecialCharacters.has(str[i])) return true;
             }
             return false;
       }
       hasUppercaseCharacters (str) {
           for( let i=0; i<str.length; i++ ) {
-            if(this.arrUppercase.has(str[i])) return true;
+            if(this.setUppercase.has(str[i])) return true;
           }
           return false;
       }
       hasLowercaseCharacters (str) {
           for( let i=0; i<str.length; i++ ) {
-            if(this.arrLowercase.has(str[i])) return true;
+            if(this.setLowercase.has(str[i])) return true;
           }
           return false;
       }
       hasNumber(str){
           for( let i=0; i<str.length; i++ ) {
-              if(this.arrNumber.has(str[i])) return true;
+              if(this.setNumber.has(str[i])) return true;
             }
             return false;
       }
